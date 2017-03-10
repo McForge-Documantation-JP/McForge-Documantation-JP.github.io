@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Interaction - Forge Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/style_fixes.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Interaction";
+    var mkdocs_page_input_path = "blocks\\interaction.md";
+    var mkdocs_page_url = "/blocks/interaction/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Forge Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../styleguide/">Style Guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/structuring/">Structuring Your Mod</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/autoupdate/">Forge Update Checker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Concepts</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/sides/">Sides</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/registries/">Registries</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blocks</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../blocks/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Interaction</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#block-interaction">Block Interaction</a></li>
+                
+                    <li><a class="toctree-l4" href="#player-right-click">Player Right Click</a></li>
+                
+                    <li><a class="toctree-l4" href="#player-breakdestroy">Player Break/Destroy</a></li>
+                
+                    <li><a class="toctree-l4" href="#player-highlighting">Player Highlighting</a></li>
+                
+                    <li><a class="toctree-l4" href="#entity-collision">Entity Collision</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blockstates</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/states/">Intro to Blockstates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/introduction/">Intro to Blockstate JSONs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/forgeBlockstates/">Forge Blockstate JSON</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Items</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../items/items/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Events</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../events/intro/">Basic Usage</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Networking</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/simpleimpl/">SimpleImpl</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Storage</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/capabilities/">Capabilities</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/worldsaveddata/">World Saved Data</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/extendedentityproperties/">Extended Entity Properties</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Utilities</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../utilities/oredictionary/">OreDictionary</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Effects</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../effects/sounds/">Sounds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Conventions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/versioning/">Versioning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/locations/">Locations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/loadstages/">Loading Stages</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Forge Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Blocks &raquo;</li>
+        
+      
+    
+    <li>Interaction</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="block-interaction">Block Interaction</h1>
+<p>There are many different ways players (and other things) can interact with blocks, such as right clicking, left clicking, colliding, walking on, and of course mining.</p>
+<p>This page will cover the basics of the most common types of interaction with blocks.</p>
+<h2 id="player-right-click">Player Right Click</h2>
+<p>Since left clicking, or &ldquo;punching&rdquo;, a block does not generally result in any unique behavior, it is probably fair to say right clicking, or &ldquo;activation&rdquo;, is <em>the</em> most common method of interaction. And thankfully, it is also one of the simplest to handle.</p>
+<h3 id="onblockactivated"><code>onBlockActivated</code></h3>
+<p>This is the method that controls right click behavior, and it is a rather complicated one. Here is its full signature:</p>
+<pre><code class="java">public boolean onBlockActivated(World worldIn,
+                                BlockPos pos,
+                                IBlockState state,
+                                EntityPlayer playerIn,
+                                EnumHand hand,
+                                @Nullable ItemStack heldItem,
+                                EnumFacing side,
+                                float hitX,
+                                float hitY,
+                                float hitZ)
+</code></pre>
+
+<p>There&rsquo;s quite a bit to discuss here.</p>
+<h4 id="parameters">Parameters</h4>
+<p>The first few parameters are obvious, they are the current world, position, and state of the block. Next is the player that is activating the block, and the hand with which they are activating.</p>
+<p>The next parameter, <code>heldItem</code>, is the <code>ItemStack</code> which the player activated the block with. Note that this parameter is <code>@Nullable</code> meaning it can be passed as null (i.e. no item was in the hand).</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The ItemStack passed to this method is the one you should use for checking what was in the player&rsquo;s hand. Grabbing the currently held stack from the player is unreliable as it may have changed since activation.</p>
+</div>
+<p>The last four parameters are all related. <code>side</code> is obviously the side which was activated, however <code>hitX</code>, <code>hitY</code>, and <code>hitZ</code> are a bit less obvious. These are the coordinates of the activation on the block&rsquo;s bounds. They are on the range 0 to 1, and represent where exactly &ldquo;on&rdquo; the block the player clicked.</p>
+<h4 id="return-value">Return Value</h4>
+<p>What is this magic boolean which must be returned? Simply put this, is whether or not the method &ldquo;did&rdquo; something. Return true if some action was performed, this will prevent further things from happening, such as item activation.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Returning <code>false</code> from this method on the client will prevent it being called on the server. It is common practice to just check <code>worldIn.isRemote</code> and return <code>true</code>, and otherwise go on to normal activation logic. Vanilla has many examples of this, such as the chest.</p>
+</div>
+<h3 id="uses">Uses</h3>
+<p>The uses for activation are literally endless. However, there are some common ones which deserve their own section.</p>
+<h4 id="guis">GUIs</h4>
+<p>One of the most common things to do on block activation is opening a GUI. Many blocks in vanilla behave this way, such as chests, hoppers, furnaces, and many more. More about GUIs can be found on <a href="../GUIs">their page</a>.</p>
+<h4 id="activation">Activation</h4>
+<p>Another common use for activation is, well, activation. This can be something like &ldquo;turning on&rdquo; a block, or triggering it to perform some action. For instance, a block could light up when activated. A vanilla example would be buttons or levers.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><code>onBlockActivated</code> is called on both the client and the server, so be sure to keep the <a href="../../concepts/sides/">sidedness</a> of your code in mind. Many things, like opening GUIs and modifying the world, should only be done on the server-side.</p>
+</div>
+<h2 id="player-breakdestroy">Player Break/Destroy</h2>
+<p><em>Coming Soon</em></p>
+<h2 id="player-highlighting">Player Highlighting</h2>
+<p><em>Coming Soon</em></p>
+<h2 id="entity-collision">Entity Collision</h2>
+<p><em>Coming Soon</em></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../blockstates/states/" class="btn btn-neutral float-right" title="Intro to Blockstates">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../blocks/" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../blocks/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../blockstates/states/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

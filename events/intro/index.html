@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Basic Usage - Forge Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/style_fixes.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Basic Usage";
+    var mkdocs_page_input_path = "events\\intro.md";
+    var mkdocs_page_url = "/events/intro/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Forge Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../styleguide/">Style Guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/structuring/">Structuring Your Mod</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/autoupdate/">Forge Update Checker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Concepts</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/sides/">Sides</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/registries/">Registries</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blocks</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/blocks/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/interaction/">Interaction</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blockstates</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/states/">Intro to Blockstates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/introduction/">Intro to Blockstate JSONs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/forgeBlockstates/">Forge Blockstate JSON</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Items</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../items/items/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Events</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Basic Usage</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#events">Events</a></li>
+                
+                    <li><a class="toctree-l4" href="#creating-an-event-handler">Creating an Event Handler</a></li>
+                
+                    <li><a class="toctree-l4" href="#canceling-results">Canceling &amp; Results</a></li>
+                
+                    <li><a class="toctree-l4" href="#priority">Priority</a></li>
+                
+                    <li><a class="toctree-l4" href="#sub-events">Sub Events</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Networking</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/simpleimpl/">SimpleImpl</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Storage</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/capabilities/">Capabilities</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/worldsaveddata/">World Saved Data</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/extendedentityproperties/">Extended Entity Properties</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Utilities</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../utilities/oredictionary/">OreDictionary</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Effects</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../effects/sounds/">Sounds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Conventions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/versioning/">Versioning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/locations/">Locations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/loadstages/">Loading Stages</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Forge Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Events &raquo;</li>
+        
+      
+    
+    <li>Basic Usage</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="events">Events</h1>
+<p>Forge uses an event bus that allows mods to intercept events from various vanilla and mod behaviors.</p>
+<p>Example: An event can be used to perform an action when a Vanilla stick is right clicked.</p>
+<p>The main event bus used for most events is located at <code>MinecraftForge.EVENT_BUS</code>. There are also a few other buses used for specific types of events (like terrain generation) located in the same class.</p>
+<p>An event handler is a class that contains one or more <code>public void</code> member methods that are marked with the <code>@SubscribeEvent</code> annotation.</p>
+<h2 id="creating-an-event-handler">Creating an Event Handler</h2>
+<pre><code class="java">public class MyForgeEventHandler {
+    @SubscribeEvent
+    public void pickupItem(EntityItemPickupEvent event) {
+        System.out.println(&quot;Item picked up!&quot;);
+    }
+}
+</code></pre>
+
+<p>This event handler listens for the <code>EntityItemPickupEvent</code>, which is, as the name states, posted to the event bus whenever an <code>Entity</code> picks up an item.</p>
+<p>To register this event handler, use <code>MinecraftForge.EVENT_BUS.register()</code> and pass it an instance of your event handler class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In older forge versions, there were two separate event buses. One for forge, one for FML. This has long since been deprecated, so there is no need to use the FML event bus any longer.</p>
+</div>
+<h3 id="static-event-handlers">Static Event Handlers</h3>
+<p>An event handler may also be static. The handling method is still annotated with <code>@SubscribeEvent</code> and the only difference from an instance handler is that it is also marked <code>static</code>. In order to register a static event handler, an instance of the class won&rsquo;t do, the <code>Class</code> itself has to be passed in. An example:</p>
+<pre><code class="java">public class MyStaticForgeEventHandler {
+    @SubscribeEvent
+    public static void arrowNocked(ArrowNockEvent event) {
+        System.out.println(&quot;Arrow nocked!&quot;);
+    }
+}
+</code></pre>
+
+<p>which must be registered like this: <code>MinecraftForge.EVENT_BUS.register(MyStaticForgeEventHandler.class)</code>.</p>
+<h3 id="automatically-registering-static-event-handlers">Automatically Registering Static Event Handlers</h3>
+<p>A class may be annotated with the <code>@Mod.EventBusSubscriber</code> annotation. Such a class is automatically registered to <code>MinecraftForge.EVENT_BUS</code> when the <code>@Mod</code> class itself is constructed. This is essentially equivalent to adding <code>MinecraftForge.EVENT_BUS.register(AnnotatedClass.class);</code> at the end of the <code>@Mod</code> class&rsquo;s constructor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This does not register an instance of the class; it registers the class itself (i.e. the event handling methods must be static).</p>
+</div>
+<h2 id="canceling-results">Canceling &amp; Results</h2>
+<p>If an event can be canceled, it will be marked with the <code>@Cancelable</code>. Events can be canceled by calling <code>setCanceled</code> on them with a boolean indicated if the event is canceled or not. If the event cannot be canceled, an <code>IllegalArgumentException</code> is thrown.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Different events may use results in different ways, refer to the event&rsquo;s JavaDoc before using the result.</p>
+</div>
+<p>Some events have an <code>Event.Result</code>, a result can be one of three things, <code>DENY</code> which stops the event, <code>DEFAULT</code> which uses the Vanilla behavior, and <code>ALLOW</code> which forces the action to take place, regardless if it would have originally. The result of an event can be set by calling <code>setResult</code> with an <code>Event.Result</code> on the event. Not all events have results, an event with a result will be annotated with <code>@HasResult</code>.</p>
+<h2 id="priority">Priority</h2>
+<p>Event handler methods (marked with <code>@SubscribeEvent</code>) have a priority. You can set the priority of an event handler method by setting the <code>priority</code> value of the annotation. The priority can be any value of the <code>EventPriority</code> enum (<code>HIGHEST</code>, <code>HIGH</code>, <code>NORMAL</code>, <code>LOW</code>, and <code>LOWEST</code>). Event handlers with priority <code>HIGHEST</code> are executed first and from there in descending order until <code>LOWEST</code> events which are executed last.</p>
+<h2 id="sub-events">Sub Events</h2>
+<p>Many events have different variations of themselves, these can be different but all based around one common factor (e.g. <code>PlayerEvent</code>) or can be an event that has multiple phases (e.g. <code>PotionBrewEvent</code>). Take note that if you listen to the parent event class, you will receive calls to your method for <em>all</em> subclasses.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../networking/" class="btn btn-neutral float-right" title="Home">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../items/items/" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../items/items/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../networking/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

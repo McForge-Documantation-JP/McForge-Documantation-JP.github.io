@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Registries - Forge Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/style_fixes.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Registries";
+    var mkdocs_page_input_path = "concepts\\registries.md";
+    var mkdocs_page_url = "/concepts/registries/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Forge Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../styleguide/">Style Guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/structuring/">Structuring Your Mod</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/autoupdate/">Forge Update Checker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Concepts</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sides/">Sides</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Registries</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#registries">Registries</a></li>
+                
+                    <li><a class="toctree-l4" href="#registering-things">Registering Things</a></li>
+                
+                    <li><a class="toctree-l4" href="#creating-registries">Creating Registries</a></li>
+                
+                    <li><a class="toctree-l4" href="#injecting-registry-values-into-fields">Injecting Registry Values Into Fields</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blocks</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/blocks/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/interaction/">Interaction</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blockstates</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/states/">Intro to Blockstates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/introduction/">Intro to Blockstate JSONs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/forgeBlockstates/">Forge Blockstate JSON</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Items</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../items/items/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Events</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../events/intro/">Basic Usage</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Networking</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/simpleimpl/">SimpleImpl</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Storage</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/capabilities/">Capabilities</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/worldsaveddata/">World Saved Data</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/extendedentityproperties/">Extended Entity Properties</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Utilities</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../utilities/oredictionary/">OreDictionary</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Effects</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../effects/sounds/">Sounds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Conventions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/versioning/">Versioning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/locations/">Locations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/loadstages/">Loading Stages</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Forge Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Concepts &raquo;</li>
+        
+      
+    
+    <li>Registries</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="registries">Registries</h1>
+<p>Registration is the process of taking the objects of a mod (items, blocks, sounds, etc.) and making them known to the game. Registering things is important, as without registration the game will simply not know about these objects in a mod and will exhibit great amounts of unexplainable behavior (and probably crash).</p>
+<p>Most things that require registration in the game are handled by the Forge registries. A registry is a simple object similar to a map that assigns values to keys. Additionally, they automatically assign integer IDs to values. Forge uses registries with <code>ResourceLocation</code> keys to register objects, which are of type <code>IForgeRegistryEntry</code>. This allows the RL to act like a &ldquo;registry name&rdquo; for the object. The registry name for an object may be accessed with <code>get</code>/<code>setRegistryName</code>. The setter can only ever be called once, and calling it twice results in an exception. Every type of registrable object has its own registry, and names in two different registries will not collide. (E.g. there&rsquo;s a registry for <code>Block</code>s, and a registry for <code>Item</code>s, and a <code>Block</code> and an <code>Item</code> may be registered with the same name <code>mod:example</code> without colliding. However, if two blocks were registered with that name, an exception would be thrown.) The default implementation of <code>IForgeRegistryEntry</code> (<code>IForgeRegistryEntry.Impl</code>) also provides two convenience implementations of <code>setRegistryName</code>: one where the parameter is a single string, and one where there are two string parameters. The overload that takes a single string checks whether the input contains a <code>:</code> (i.e. it checks whether the passed in stringified <code>ResourceLocation</code> has a domain), and if it doesn&rsquo;t it uses the current modid as the resource domain. The two argument overload simply constructs the registry name using the <code>modID</code> as the domain and <code>name</code> as the path.</p>
+<p>There also exists the &ldquo;registry registry&rdquo;, a registry that registers other registries. This registry registers registries with <code>ResourceLocation</code> names and secondary <code>Class</code> keys. This allows one to look up the registry that registers a certain class (e.g. one can look up <code>Block.class</code> in the registry registry with <code>GameRegistry.findRegistry</code> to get the registry that registers blocks).</p>
+<h2 id="registering-things">Registering Things</h2>
+<p>The recommended way to register things is through the <code>RegistryEvent</code>s. In <code>RegistryEvent.NewRegistry</code>, registries should be created. Later, <code>RegistryEvent.Register</code> is fired once for each registered registry. Because <code>Register</code> is a generic event, the event handler should set the type parameter to the type of the object being registered. The event will contain the registry to register things to (<code>getRegistry</code>), and things may be registered with <code>register</code> (or <code>registerAll</code>) on the registry. Here&rsquo;s an example of an event handler that registers blocks:</p>
+<pre><code class="java">@SubscribeEvent
+public void registerBlocks(RegistryEvent.Register&lt;Block&gt; event) {
+    event.getRegistry().registerAll(block1, block2, ...);
+}
+</code></pre>
+
+<p>The order in which <code>RegistryEvent.Register</code> events fire is arbitrary, with the exception that <code>Block</code> will <em>always</em> fire first, and <code>Item</code> will <em>always</em> fire second, right after <code>Block</code>. After the <code>Register&lt;Block&gt;</code> event has fired, all <a href="#injecting-registry-values-into-fields"><code>ObjectHolder</code></a> annotations are refreshed, and after <code>Register&lt;Item&gt;</code> has fired they are refreshed again. They are refreshed for a third time after <em>all</em> of the other <code>Register</code> events have fired.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>These events are fired <em>before</em> preinit. This means that <code>@Mod.EventBusSubscriber</code> (or <code>MinecraftForge.EVENT_BUS.register</code> in the <code>@Mod</code> class&rsquo;s constructor for e.g. Scala mods which do not support <code>static</code>) should be used to register the event handler before preinit.</p>
+</div>
+<p>There is another, older way of registering objects into registries, using <code>GameRegistry.register</code>. Anytime something suggests using this method, it should be replaced with an event handler for the appropriate registry event. This method simply finds the registry corresponding to an <code>IForgeRegistryEntry</code> with <code>IForgeRegistryEntry::getRegistryType</code>, and then registers the object to the registry. There is also a convenience overload that takes an <code>IForgeRegistryEntry</code> (<code>ifre</code>) and an RL, which is equivalent to <code>GameRegistry.register(ifre.setRegistryName(rl))</code>.</p>
+<h2 id="creating-registries">Creating Registries</h2>
+<p>Registries are not only for Forge. Any mod can create their own registries, and any mod can register things to registries from any other mod. Registries are created by using <code>RegistryBuilder</code>. This class takes certain parameters for the registry it will generate, such as the name. the <code>Class</code> of it&rsquo;s values, and various callbacks for when the registry is changed. Upon calling <code>RegistryBuilder::create</code>, the registry is built, registered to the registry registry, and returned to the caller.</p>
+<h2 id="injecting-registry-values-into-fields">Injecting Registry Values Into Fields</h2>
+<p>It is possible to have Forge inject values from registries into <code>public static final</code> fields of classes. This is done by annotating classes and fields with <code>@ObjectHolder</code>. If a class has this annotation, all the <code>public static final</code> fields within are taken to be object holders too, and the value of the annotation is the domain of the holder (i.e. every field uses it as the default domain for the registry name of the object to inject). If a field has this annotation, and the value does not contain a domain, the domain is chosen from the surrounding class&rsquo;s <code>@ObjectHolder</code> annotation. If the class is not annotated in this situation, the field is ignored with a warning. If it does contain a domain, then the object to inject into the field is the object with that name. If the class has the annotation and one of the <code>public static final</code> fields does not, then the resource path of the object&rsquo;s name is taken to be the field&rsquo;s name. The type of the registry is taken from the type of the field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an object is not found, either because the object itself hasn&rsquo;t been registered or because the registry does not exist, a debug message is logged and the field is left unchanged.</p>
+</div>
+<p>As these rules are rather complicated, here are some examples:</p>
+<pre><code class="java">@ObjectHolder(&quot;minecraft&quot;) // Resource domain &quot;minecraft&quot;
+class AnnotatedHolder {
+    public static final Block diamond_block = null; // public static final is required.
+                                                    // Type Block means that the Block registry will be queried.
+                                                    // diamond_block is the field name, and as the field is not annotated it is taken to be the resource path.
+                                                    // As there is no explicit domain, &quot;minecraft&quot; is inherited from the class.
+                                                    // Object to be injected: &quot;minecraft:diamond_block&quot; from the Block registry.
+
+    @ObjectHolder(&quot;ender_eye&quot;)
+    public static final Item eye_of_ender = null;   // Type Item means that the Item registry will be queried.
+                                                    // As the annotation has the value &quot;ender_eye&quot;, that overrides the field's name.
+                                                    // As the domain is not explicit, &quot;minecraft&quot; is inherited from the class.
+                                                    // Object to be injected: &quot;minecraft:ender_eye&quot; from the Item registry.
+
+    @ObjectHolder(&quot;neomagicae:coffeinum&quot;)
+    public static final ManaType coffeinum = null;  // Type ManaType means that the ManaType registry will be queried. This is obviously a registry made by a mod.
+                                                    // As the annotation has the value &quot;neomagicae:coffeinum&quot;, that overrides the field's name.
+                                                    // The domain is explicit, and is &quot;neomagicae&quot;, overriding the class's &quot;minecraft&quot; default.
+                                                    // Object to be injected: &quot;neomagicae:coffeinum&quot; from the ManaType registry.
+
+    public static final Item ENDER_PEARL = null;    // Note that the actual name is &quot;minecraft:ender_pearl&quot;, not &quot;minecraft:ENDER_PEARL&quot;.
+                                                    // Therefore, THIS WILL FAIL. The field has to be lowercased or annotated.
+}
+
+class UnannotatedHolder { // Note lack of annotation on this class.
+    @ObjectHolder(&quot;minecraft:flame&quot;)
+    public static final Enchantment flame = null;   // No annotation on the class means that there is no preset domain to inherit.
+                                                    // Field annotation supplies all the information for the object.
+                                                    // Object to be injected: &quot;minecraft:flame&quot; from the Enchantment registry.
+
+    public static final Biome ice_flat = null;      // No annotation on the class or the field.
+                                                    // Therefore this just gets ignored.
+
+    @ObjectHolder(&quot;levitation&quot;)
+    public static final Potion levitation = null;   // No resource domain in annotation, and no default specified by class annotation.
+                                                    // Therefore, THIS WILL FAIL. The field annotation needs a domain, or the class needs an annotation.
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../blocks/blocks/" class="btn btn-neutral float-right" title="Home">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../sides/" class="btn btn-neutral" title="Sides"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../sides/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../blocks/blocks/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

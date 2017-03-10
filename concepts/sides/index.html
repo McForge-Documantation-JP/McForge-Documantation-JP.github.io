@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Sides - Forge Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/style_fixes.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Sides";
+    var mkdocs_page_input_path = "concepts\\sides.md";
+    var mkdocs_page_url = "/concepts/sides/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Forge Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../styleguide/">Style Guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/structuring/">Structuring Your Mod</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/autoupdate/">Forge Update Checker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Concepts</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Sides</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#sides-in-minecraft">Sides in Minecraft</a></li>
+                
+                    <li><a class="toctree-l4" href="#different-kinds-of-sides">Different Kinds of Sides</a></li>
+                
+                    <li><a class="toctree-l4" href="#performing-side-specific-operations">Performing Side-Specific Operations</a></li>
+                
+                    <li><a class="toctree-l4" href="#common-mistakes">Common Mistakes</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../registries/">Registries</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blocks</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/blocks/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/interaction/">Interaction</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blockstates</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/states/">Intro to Blockstates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/introduction/">Intro to Blockstate JSONs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/forgeBlockstates/">Forge Blockstate JSON</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Items</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../items/items/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Events</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../events/intro/">Basic Usage</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Networking</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/simpleimpl/">SimpleImpl</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Storage</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/capabilities/">Capabilities</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/worldsaveddata/">World Saved Data</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/extendedentityproperties/">Extended Entity Properties</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Utilities</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../utilities/oredictionary/">OreDictionary</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Effects</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../effects/sounds/">Sounds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Conventions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/versioning/">Versioning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/locations/">Locations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/loadstages/">Loading Stages</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Forge Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Concepts &raquo;</li>
+        
+      
+    
+    <li>Sides</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="sides-in-minecraft">Sides in Minecraft</h1>
+<p>A very important concept to understand when modding Minecraft are the two sides: <em>client</em> and <em>server</em>. There are many, many common misconceptions and mistakes regarding siding, which can lead to bugs that might not crash the game, but can rather have unintended and often unpredictable effects.</p>
+<h2 id="different-kinds-of-sides">Different Kinds of Sides</h2>
+<p>When we say &ldquo;client&rdquo; or &ldquo;server&rdquo;, it usually follows with a fairly intuitive understanding of what part of the game we&rsquo;re talking about. After all, a client is what the user interacts with, and a server is where the user connects for a multiplayer game. Easy, right?</p>
+<p>As it turns out, there can be some ambiguity even with two such terms. Here we disambiguate the four possible meanings of &ldquo;client&rdquo; and &ldquo;server&rdquo;:</p>
+<ul>
+<li>Physical client - The <em>physical client</em> is the entire program that runs whenever you launch Minecraft from the launcher. All threads, processes, and services that run during the game&rsquo;s graphical, interactable lifetime are part of the physical client.</li>
+<li>Physical server - Often known as the dedicated server, the <em>physical server</em> is the entire program that runs whenever you launch any sort of <code>minecraft_server.jar</code> that does not bring up a playable GUI.</li>
+<li>Logical server - The <em>logical server</em> is what runs game logic: mob spawning, weather, updating inventories, health, AI, and all other game mechanics. The logical server is present within the physical server, but is also can run inside a physical client together with a logical client, as a single player world. The logical server always runs in a thread named the <code>Server Thread</code>.</li>
+<li>Logical client - The <em>logical client</em> is what accepts input from the player and relays it to the logical server. In addition, it also receives information from the logical server and makes it available graphically to the player. The logical client runs in the <code>Client Thread</code>, though often several other threads are spawned to handle things like audio and chunk render batching.</li>
+</ul>
+<h2 id="performing-side-specific-operations">Performing Side-Specific Operations</h2>
+<h3 id="worldisremote"><code>world.isRemote</code></h3>
+<p>This boolean check will be your most used way to check sides. Querying this field on a <code>World</code> object establishes the  <strong>logical</strong> side the world belongs to. That is, if this field is <code>true</code>, the world is currently running on the logical client. If the field is <code>false</code>, the world is running on the logical server. It follows that the physical server will always contain <code>false</code> in this field, but we cannot assume that <code>false</code> implies a physical server, since this field can also be <code>false</code> for the logical server inside a physical client (in other words, a single player world).</p>
+<p>Use this check whenever you need to determine if game logic and other mechanics should be run. For example, if you want to damage the player every time they click your block, or have your machine process dirt into diamonds, you should only do so after ensuring <code>world.isRemote</code> is <code>false</code>. Applying game logic to the logical client can cause desynchronization (ghost entities, desynchronized stats, etc.) in the lightest case, and crashes in the worst case.</p>
+<p>This check should be used as your go-to default. Aside from proxies, rarely will you need the other ways of determining side and adjusting behavior.</p>
+<h3 id="sidedproxy"><code>@SidedProxy</code></h3>
+<p>Considering the use of a single &ldquo;universal&rdquo; jar for client and server mods, and the separation of the physical sides into two jars, an important question comes to mind: How do we use code that is only present on one physical side? All code in <code>net.minecraft.client</code> is only present on the physical client, and all code in <code>net.minecraft.server.dedicated</code> is only present on the physical server. If any class you write references those names in any way, they will crash the game when that respective class is loaded in an environment where those names do not exist. A very common mistake in beginners is to call <code>Minecraft.getMinecraft().&lt;doStuff&gt;()</code> in block or tile entity classes, which will crash any physical server as soon as the class is loaded.</p>
+<p>How do we resolve this? Luckily, FML provides us with a <code>@SidedProxy</code> annotation. We supply it the names of two classes (one for <code>serverSide</code>, one for <code>clientSide</code>), and decorate a field with this annotation. When the mod starts, FML will instantiate one of the two classes based on the <strong>physical</strong> side.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to understand that FML picks the proxy to instantiate based on the <strong>physical</strong> side. A single player world (logical server + logical client within a physical client) will still have a proxy of the type you specify in <code>clientSide</code>!</p>
+</div>
+<p>A common use case is to register renderers and models, something which must be called from the main initialization methods <code>preInit</code>, <code>init</code>, or <code>postInit</code>. However, many rendering related classes and registries are not present on the physical server and may crash it. Therefore, we put these actions into the client proxy, ensuring that they will always execute for the physical client.</p>
+<p>Remember that both of your specified proxies must have a type that is assignable into the field you annotate with <code>@SidedProxy</code>. A common pattern, but by no means the only strategy, is to have an interface <code>IProxy</code> as the field type, and then have two implementations, <code>ClientProxy</code> and <code>ServerProxy</code> for the two corresponding physical sides.</p>
+<h3 id="geteffectiveside"><code>getEffectiveSide</code></h3>
+<p><code>FMLCommonHandler.getEffectiveSide()</code> can be called in order to retrieve the <strong>logical</strong> side when you do not have access to a <code>World</code> object to check <code>isRemote</code>. It <em>guesses</em> which logical side you are on by looking at the name of the currently running thread. Because it is a guess, this method should only be used when other options have been exhausted. In nearly every case, you should prefer checking <code>world.isRemote</code> to this method call.</p>
+<h3 id="getside-and-sideonly"><code>getSide</code> and <code>@SideOnly</code></h3>
+<p><code>FMLCommonHandler.getSide()</code> can be called in order to retrieve the <strong>physical</strong> side your code is running on. Since it is determined at startup, it does not rely on guessing to return its result. The number of use cases for this method is limited, however.</p>
+<p>Annotating a method or field with the <code>@SideOnly</code> annotation indicates to the loader that the respective member should be completely stripped out of the definition not on the specified <strong>physical</strong> side. Usually, these are only seen when browsing through the decompiled Minecraft code, indicating methods that the Mojang obfuscator stripped out. There is little to no reason for using this annotation directly. Only use it if you are overriding a vanilla method that already has <code>@SideOnly</code> defined. In most other cases where you need to dispatch behavior based on physical sides, use <code>@SidedProxy</code> or a check on <code>getSide()</code> instead.</p>
+<h2 id="common-mistakes">Common Mistakes</h2>
+<h3 id="reaching-across-logical-sides">Reaching Across Logical Sides</h3>
+<p>Whenever you want to send information from one logical side to another, you must <strong>always</strong> use network packets. It is incredibly tempting, when in a single player scenario, to directly transfer data from the logical server to the logical client.</p>
+<p>This is actually very commonly inadvertently done through static fields. Since the logical client and logical server share the same JVM in a single player scenario, both threads writing to and reading from static fields will cause all sorts of race conditions and the classical issues associated with threading.</p>
+<p>This mistake can also be made explicitly by accessing physical client-only classes such as <code>Minecraft</code> from common code that runs or can run on the logical server. This mistake is easy to miss for beginners, who debug in a physical client. The code will work there, but will immediately crash on a physical server.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../registries/" class="btn btn-neutral float-right" title="Registries">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../gettingstarted/autoupdate/" class="btn btn-neutral" title="Forge Update Checker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../gettingstarted/autoupdate/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../registries/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

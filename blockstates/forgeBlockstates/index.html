@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Forge Blockstate JSON - Forge Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/style_fixes.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Forge Blockstate JSON";
+    var mkdocs_page_input_path = "blockstates\\forgeBlockstates.md";
+    var mkdocs_page_url = "/blockstates/forgeBlockstates/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Forge Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../styleguide/">Style Guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/structuring/">Structuring Your Mod</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../gettingstarted/autoupdate/">Forge Update Checker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Concepts</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/sides/">Sides</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/registries/">Registries</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blocks</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/blocks/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/interaction/">Interaction</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blockstates</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../states/">Intro to Blockstates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../introduction/">Intro to Blockstate JSONs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Forge Blockstate JSON</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#forges-blockstates">Forge's Blockstates</a></li>
+                
+                    <li><a class="toctree-l4" href="#general-structure-of-the-format">General Structure of the Format</a></li>
+                
+                    <li><a class="toctree-l4" href="#sub-models">Sub-Models</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Items</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../items/items/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Events</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../events/intro/">Basic Usage</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Networking</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/simpleimpl/">SimpleImpl</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Storage</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/capabilities/">Capabilities</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/worldsaveddata/">World Saved Data</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/extendedentityproperties/">Extended Entity Properties</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Utilities</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../utilities/oredictionary/">OreDictionary</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Effects</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../effects/sounds/">Sounds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Conventions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/versioning/">Versioning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/locations/">Locations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/loadstages/">Loading Stages</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Forge Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Blockstates &raquo;</li>
+        
+      
+    
+    <li>Forge Blockstate JSON</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="forges-blockstates">Forge&rsquo;s Blockstates</h1>
+<p>Forge has its own blockstate json format to accommodate for modders needs. It introduces submodels, which allows you to build the final blockstate from different parts. You can build a models <em>normal</em> blockstate from multiple parts as well as create a complex variant depending on the blocks properties.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Note that all models and textures referenced are from vanilla minecraft. For your own mod, you have to use the full location! For example: <code>"mymod:blocks/blockTexture"</code>.</p>
+<p>You don&rsquo;t have to use Forge&rsquo;s blockstate format at all, you can also use the vanilla format!</p>
+</div>
+<h2 id="general-structure-of-the-format">General Structure of the Format</h2>
+<pre><code class="json">{
+    &quot;forge_marker&quot;: 1,
+    &quot;defaults&quot;: {
+        &quot;textures&quot;: {
+            &quot;all&quot;: &quot;blocks/dirt&quot;
+        },
+        &quot;model&quot;: &quot;cube_all&quot;,
+        &quot;uvlock&quot;: true
+    },
+    &quot;variants&quot;: {
+        &quot;normal&quot;: [{
+
+        }]
+    }
+}
+</code></pre>
+
+<p>This json declares a simple blockstate that has dirt on each side. Let&rsquo;s go through it step by step.</p>
+<pre><code class="json">    &quot;forge_marker&quot;: 1,
+</code></pre>
+
+<p>This tells the game that the blockstate json is the one from Forge, not from vanilla Minecraft.
+The 1 is the version of the format, which ensures that old blockstate JSONs can be supported should the format ever change. Currently there is only this one.</p>
+<pre><code class="json">    &quot;defaults&quot;: {
+        &quot;textures&quot;: {
+            &quot;all&quot;: &quot;blocks/dirt&quot;
+        },
+        &quot;model&quot;: &quot;cube_all&quot;,
+        &quot;uvlock&quot;: true
+    }
+</code></pre>
+
+<p>The defaults section contains the default values for all variants. They can be overwritten by the variants. The defaults section is <strong>optional</strong>! You do not need to define defaults, the block can be omitted altogether.</p>
+<pre><code class="json">    &quot;variants&quot;: {
+        &quot;normal&quot;: [{
+
+        }]
+    }
+</code></pre>
+
+<p>This defines all variants for the block. The simple dirt block only has its default, the <em>normal</em> variant. It does not contain any additional information in this case. Everything that is defined in defaults could also be defined here.
+For example:</p>
+<pre><code class="json">    &quot;normal&quot;: [{
+        &quot;textures&quot;: {
+            &quot;side&quot;: &quot;blocks/cobblestone&quot;,
+            &quot;end&quot;: &quot;blocks/dirt&quot;
+        },
+        &quot;model&quot;: &quot;cube_column&quot;
+    }]
+</code></pre>
+
+<p>This normal variant would use the <em>cube_column</em> model with cobblestone on the sides and dirt on top and bottom.</p>
+<h2 id="sub-models">Sub-Models</h2>
+<p>To show the use of submodels we will create a model that has different variants. Each variant will use submodels to create a different model.
+The model will be a pressure plate, and depending on its state it will have parts added to it.</p>
+<pre><code class="json">{
+    &quot;forge_marker&quot;: 1,
+    &quot;defaults&quot;: {
+        &quot;textures&quot;: {
+            &quot;texture&quot;: &quot;blocks/planks_oak&quot;,
+            &quot;wall&quot;: &quot;blocks/planks_oak&quot;
+        },
+        &quot;model&quot;: &quot;pressure_plate_up&quot;,
+        &quot;uvlock&quot;: true
+    },
+    &quot;variants&quot;: {
+        // mossy is a boolean property.
+        &quot;mossy&quot;: {
+            &quot;true&quot;: {
+                // if true it changes the pressure plate from oak planks to mossy cobble
+                &quot;textures&quot;: {
+                    &quot;texture&quot;: &quot;blocks/cobblestone_mossy&quot;
+                }
+            },
+            &quot;false&quot;: {
+                // change nothing. The entry has to be here to be generated for internal usage by minecraft
+            }
+        },
+        // pillarcount is a property that determines how many pillar submodels we have. Ranges from 0 to 2
+        &quot;pillarcount&quot;: {
+            0: {
+                // no pillar. Remember, has to be there.
+            },
+            1: {
+                // if it is true, it will add the wall model and combine it with the pressure plate
+                &quot;submodel&quot;: &quot;wall_n&quot;
+            },
+            2: {
+                &quot;textures&quot;: {
+                    &quot;wall&quot;: &quot;blocks/cobblestone&quot;
+                },
+                &quot;submodel&quot;: {
+                    &quot;pillar1&quot;: { &quot;model&quot;: &quot;wall_n&quot; },
+                    &quot;pillar2&quot;: { &quot;model&quot;: &quot;wall_n&quot;, &quot;y&quot;: 90 }
+                }
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>The comments already explain the details on the separate parts, but here&rsquo;s how it works overall: The block definition in code has two Properties. One boolean property named &ldquo;mossy&rdquo; and one integer property named &ldquo;pillarCount&rdquo;. Notice here that the string used in the json is <strong>lowercase</strong>, however. It has to be lowercase or it wont be found.</p>
+<p>Instead of defining &ldquo;this combination of properties gives model X&rdquo; we say &ldquo;<strong>this</strong> value for this property has <strong>that</strong> impact on the model&rdquo;. In this example it&rsquo;s quite straight forward:</p>
+<ul>
+<li>If mossy is true, the pressure plate uses the mossy cobblestone texture</li>
+<li>If pillarCount is 1 it will add one wall with connection facing north. The default texture for the wall is oak-planks.</li>
+<li>If pillarCount is 2 it will add two walls, both facing north. However the second wall will be rotated by 90 degree. This showcases that you do not need separate model with Forge&rsquo;s system. You only need once and rotate it around the Y axis. Additionally the texture of the walls is changed to cobblestone.</li>
+<li>If pillarCount is 0 no walls will be added.</li>
+</ul>
+<p>And here is the result of our work:</p>
+<p><img alt="The model in different variations" src="../example.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../items/items/" class="btn btn-neutral float-right" title="Home">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../introduction/" class="btn btn-neutral" title="Intro to Blockstate JSONs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../introduction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../items/items/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

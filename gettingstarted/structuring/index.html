@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Structuring Your Mod - Forge Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/style_fixes.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Structuring Your Mod";
+    var mkdocs_page_input_path = "gettingstarted\\structuring.md";
+    var mkdocs_page_url = "/gettingstarted/structuring/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Forge Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../styleguide/">Style Guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Structuring Your Mod</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#structuring-your-mod">Structuring Your Mod</a></li>
+                
+                    <li><a class="toctree-l4" href="#packaging">Packaging</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-mcmodinfo-file">The mcmod.info file</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-mod-file">The Mod File</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-is-mod">What is @Mod?</a></li>
+                
+                    <li><a class="toctree-l4" href="#keeping-your-code-clean-using-sub-packages">Keeping Your Code Clean Using Sub-packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#class-naming-schemes">Class Naming Schemes</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../autoupdate/">Forge Update Checker</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Concepts</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/sides/">Sides</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/registries/">Registries</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blocks</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/blocks/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blocks/interaction/">Interaction</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blockstates</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/states/">Intro to Blockstates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/introduction/">Intro to Blockstate JSONs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../blockstates/forgeBlockstates/">Forge Blockstate JSON</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Items</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../items/items/">Home</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Events</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../events/intro/">Basic Usage</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Networking</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/">Home</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/overview/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../networking/simpleimpl/">SimpleImpl</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Storage</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/capabilities/">Capabilities</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/worldsaveddata/">World Saved Data</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../datastorage/extendedentityproperties/">Extended Entity Properties</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Utilities</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../utilities/oredictionary/">OreDictionary</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Effects</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../effects/sounds/">Sounds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Conventions</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/versioning/">Versioning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/locations/">Locations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../conventions/loadstages/">Loading Stages</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Forge Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Getting Started &raquo;</li>
+        
+      
+    
+    <li>Structuring Your Mod</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="structuring-your-mod">Structuring Your Mod</h1>
+<p>We&rsquo;ll look at how to organize your mod into different files and what those files should do.</p>
+<h2 id="packaging">Packaging</h2>
+<p>Pick a unique package name. If you own a URL associated with your project, you can use it as your top level package. For example if you own &ldquo;example.com&rdquo;, you may use <code>com.example</code> as your top level package.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you do not own a domain, do not use it for your top level package. It is perfectly acceptable to start your package with anything, such as your name/nickname, or the name of the mod.</p>
+</div>
+<p>After the top level package (if you have one) you append a unique name for your mod, such as <code>examplemod</code>. In our case it will end up as <code>com.example.examplemod</code>.</p>
+<h2 id="the-mcmodinfo-file">The <code>mcmod.info</code> file</h2>
+<p>This file defines the metadata of your mod. Its information may be viewed by users from the main screen of the game through the Mods button. A single info file can describe several mods. When a mod is annotated by the <code>@Mod</code> annotation, it may define the <code>useMetadata</code> property, which defaults to <code>false</code>. When <code>useMetadata</code> is <code>true</code>, the metadata within <code>mcmod.info</code> overrides whatever has been defined in the annotation.</p>
+<p>The <code>mcmod.info</code> file is formatted as JSON, where the root element is a list of objects and each object describes one modid. It should be stored as <code>src/main/resources/mcmod.info</code>. A basic <code>mcmod.info</code>, describing one mod, may look like this:</p>
+<pre><code>[{
+  "modid": "examplemod",
+  "name": "Example Mod",
+  "description": "Lets you craft dirt into diamonds. This is a traditional mod that has existed for eons. It is ancient. The holy Notch created it. Jeb rainbowfied it. Dinnerbone made it upside down. Etc.",
+  "version": "1.0.0.0",
+  "mcversion": "1.10.2",
+  "logoFile": "assets/examplemod/textures/logo.png",
+  "url": "minecraftforge.net/",
+  "updateJSON": "minecraftforge.net/versions.json",
+  "authorList": ["Author"],
+  "credits": "I'd like to thank my mother and father.",
+}]
+</code></pre>
+<p>The default Gradle configuration replaces <code>${version}</code> with the project version, and <code>${mcversion}</code> with the Minecraft version, but <em>only</em> within <code>mcmod.info</code>, so you should use those instead of directly writing them out. Here is a table of attributes that may be given to a mod, where <code>required</code> means there is no default and the absence of the property causes an error. In addition to the required properties, you should also define <code>description</code>, <code>version</code>, <code>mcversion</code>, <code>url</code>, and <code>authorList</code>.</p>
+<table>
+<thead>
+<tr>
+<th align="right">Property</th>
+<th align="center">Type</th>
+<th align="center">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">modid</td>
+<td align="center">string</td>
+<td align="center">required</td>
+<td align="left">The modid this description is linked to. If the mod is not loaded, the description is ignored.</td>
+</tr>
+<tr>
+<td align="right">name</td>
+<td align="center">string</td>
+<td align="center">required</td>
+<td align="left">The user-friendly name of this mod.</td>
+</tr>
+<tr>
+<td align="right">description</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">A description of this mod in 1-2 paragraphs.</td>
+</tr>
+<tr>
+<td align="right">version</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">The version of the mod.</td>
+</tr>
+<tr>
+<td align="right">mcversion</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">The Minecraft version.</td>
+</tr>
+<tr>
+<td align="right">url</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">A link to the mod&rsquo;s homepage.</td>
+</tr>
+<tr>
+<td align="right">updateUrl</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">Defined but unused. Superseded by updateJSON.</td>
+</tr>
+<tr>
+<td align="right">updateJSON</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">The URL to a <a href="../autoupdate#forge-update-checker">version JSON</a>.</td>
+</tr>
+<tr>
+<td align="right">authorList</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">A list of authors to this mod.</td>
+</tr>
+<tr>
+<td align="right">credits</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">A string that contains any acknowledgements you want to mention.</td>
+</tr>
+<tr>
+<td align="right">logoFile</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">The path to the mod&rsquo;s logo. It is resolved on top of the classpath, so you should put it in a location where the name will not conflict, maybe under your own assets folder.</td>
+</tr>
+<tr>
+<td align="right">screenshots</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">A list of images to be shown on the info page. Currently unimplemented.</td>
+</tr>
+<tr>
+<td align="right">parent</td>
+<td align="center">string</td>
+<td align="center"><code>""</code></td>
+<td align="left">The modid of a parent mod, if applicable. Using this allows modules of another mod to be listed under it in the info page, like BuildCraft.</td>
+</tr>
+<tr>
+<td align="right">useDependencyInformation</td>
+<td align="center">boolean</td>
+<td align="center"><code>false</code></td>
+<td align="left">If true and <code>Mod.useMetadata</code>, the below 3 lists of dependencies will be used. If not, they do nothing.</td>
+</tr>
+<tr>
+<td align="right">requiredMods</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">A list of modids. If one is missing, the game will crash. This <strong>does not affect the <em>ordering</em> of mod loading!</strong> To specify ordering as well as requirement, have a coupled entry in <code>dependencies</code>.</td>
+</tr>
+<tr>
+<td align="right">dependencies</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">A list of modids. All of the listed mods will load <em>before</em> this one. If one is not present, nothing happens.</td>
+</tr>
+<tr>
+<td align="right">dependants</td>
+<td align="center">[string]</td>
+<td align="center"><code>[]</code></td>
+<td align="left">A list of modids. All of the listed mods will load <em>after</em> this one. If one is not present, nothing happens.</td>
+</tr>
+</tbody>
+</table>
+<p>A good example <code>mcmod.info</code> that uses many of these properties is <a href="http://gist.github.com/anonymous/05ad9a1e0220bbdc25caed89ef0a22d2">BuildCraft</a>.</p>
+<h2 id="the-mod-file">The Mod File</h2>
+<p>Generally, we&rsquo;ll start with a file named after your mod, and put into your package. This is the <em>entry point</em> to your mod
+and will contain some special indicators marking it as such.</p>
+<h2 id="what-is-mod">What is <code>@Mod</code>?</h2>
+<p>This is an annotation indicating to the Forge Mod Loader that the class is a Mod entry point. It contains various metadata about the mod. It also designates the class that will receive <code>@EventHandler</code> events. More information can be found at&hellip; (Coming Soon)</p>
+<p>You can find an example mod in the <a href="http://files.minecraftforge.net/">Forge src download</a>.</p>
+<h2 id="keeping-your-code-clean-using-sub-packages">Keeping Your Code Clean Using Sub-packages</h2>
+<p>Rather than clutter up a single class and package with everything, it is recommended you break your mod into subpackages.</p>
+<p>A common subpackage strategy has packages for <code>common</code> and <code>client</code> code, which is code that can be run on server/client and client, respectively. Inside the <code>common</code> package would go things like Items, Blocks, and Tile Entities (which can each in turn be another subpackage). Things like GUIs and Renderers would go inside the <code>client</code> package.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This package style is only a suggestion, though it is a commonly used style. Feel free to use your own packaging system.</p>
+</div>
+<p>By keeping your code in clean subpackages, you can grow your mod much more organically.</p>
+<h2 id="class-naming-schemes">Class Naming Schemes</h2>
+<p>A common class naming scheme allows easier deciphering of what a class is, and also makes it easier for someone developing with your mod to find things.</p>
+<p>For Example:</p>
+<ul>
+<li>An <code>Item</code> called <code>PowerRing</code> would be in an <code>item</code> package, with a class name of <code>ItemPowerRing</code>.</li>
+<li>A <code>Block</code> called <code>NotDirt</code> would be in a <code>block</code> package, with a class name of <code>BlockNotDirt</code>.</li>
+<li>Finally, a <code>TileEntity</code> for a block called <code>SuperChewer</code> would be a <code>tile</code> or <code>tileentity</code> package, with a class name of <code>TileSuperChewer</code>.</li>
+</ul>
+<p>Prepending your class names with what <em>kind</em> of object they are makes it easier to figure out what a class is, or guess the class for an object.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../autoupdate/" class="btn btn-neutral float-right" title="Forge Update Checker">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../autoupdate/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

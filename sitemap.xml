@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/styleguide/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/gettingstarted/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/gettingstarted/structuring/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/gettingstarted/autoupdate/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/concepts/sides/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/concepts/registries/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/blocks/blocks/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/blocks/interaction/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/blockstates/states/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/blockstates/introduction/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/blockstates/forgeBlockstates/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/items/items/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/events/intro/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/networking/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/networking/overview/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/networking/simpleimpl/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/datastorage/capabilities/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/datastorage/worldsaveddata/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/datastorage/extendedentityproperties/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/utilities/oredictionary/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/effects/sounds/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/conventions/versioning/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/conventions/locations/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/conventions/loadstages/</loc>
+     <lastmod>2017-03-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>
